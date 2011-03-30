@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "nip_number"
   s.version     = NipNumber::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Mariusz Nosinski"]
+  s.email       = ["marioosh@5dots.pl"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
+  s.summary     = %q{Basic library to validate polish NIP number}
   s.description = %q{TODO: Write a gem description}
 
   s.rubyforge_project = "nip_number"
