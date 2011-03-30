@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "magick_number/version"
+require "magick_numbers/version"
 
 Gem::Specification.new do |s|
   s.name        = "magick_numbers"
-  s.version     = MagickNumber::VERSION
+  s.version     = MagickNumbers::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Mariusz Nosinski"]
   s.email       = ["marioosh@5dots.pl"]
