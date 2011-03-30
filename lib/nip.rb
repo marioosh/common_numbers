@@ -1,7 +1,8 @@
-module NipNumber
+module MagickNumber
   class Nip
     MASK = [ 6, 5, 7, 2, 3, 4, 5, 6, 7]
     MODULO = 11 
+    REGEXP = /^(PL)?[0-9]*/
 
     def initialize(number)
       @number = number.to_s.gsub('-', '')
@@ -17,7 +18,7 @@ private
   end
 
   def validate_regexp
-     /^(PL)?[0-9]*/ =~ @number
+      REGEXP =~ @number
   end
 
   def validate_length
@@ -30,7 +31,6 @@ private
 
   def validate_sum_control
     @number.slice!(0..1) if international?
-    puts @number
     nip = @number.split( "").collect &:to_i
     checksum = MASK.inject(0) {|sum, weight| sum + weight * nip.shift}
     checksum % MODULO === nip.shift
