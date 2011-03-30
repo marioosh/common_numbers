@@ -1,0 +1,3 @@
+module NipNumber
+  # Your code goes here...
+end
