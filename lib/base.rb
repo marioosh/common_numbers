@@ -2,7 +2,11 @@ module MagickNumbers
   
   class Base
     
-    attr_accessor :magick_number, :regexp, :mask, :modulo
+    attr_reader :magick_number, :regexp, :mask, :modulo, :length
+
+    def initialize(num)
+      @magick_number = num.to_s.gsub('-', '')
+    end
 
     def valid?
       validate
@@ -16,14 +20,10 @@ module MagickNumbers
         regexp =~ magick_number
     end
 
-    def validate_sum_control
-      magick_number.slice!(0..1) if international?
-      nip = magick_number.split( "").collect &:to_i
-      checksum = mask.inject(0) {|sum, weight| sum + weight * nip.shift}
-      mod = checksum % modulo
-      mod = 0 if mod == 10
-      mod === nip.shift
+    def validate_length
+      magick_number.size == length
     end
+
   end
 
 end

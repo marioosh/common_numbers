@@ -2,11 +2,11 @@ module MagickNumbers
   class Nip < MagickNumbers::Base
 
     def initialize(num)
-
+      super(num)
       @mask = [ 6, 5, 7, 2, 3, 4, 5, 6, 7]
       @modulo = 11 
       @regexp = /^(PL)?[0-9]*/
-      @magick_number = num.to_s.gsub('-', '')
+      # @magick_number = num.to_s.gsub('-', '')
 
     end
 
@@ -20,6 +20,13 @@ module MagickNumbers
     /^PL/ =~ @magick_number
   end
 
+  def validate_sum_control
+    magick_number.slice!(0..1) if international?
+    nip = magick_number.split( "").collect &:to_i
+    checksum = mask.inject(0) {|sum, weight| sum + weight * nip.shift}
+    mod = checksum % modulo
+    mod === nip.shift
+  end
 
 
 end
