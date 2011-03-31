@@ -22,10 +22,8 @@ module MagickNumbers
 
   def validate_sum_control
     magick_number.slice!(0..1) if international?
-    nip = magick_number.split( "").collect &:to_i
-    checksum = mask.inject(0) {|sum, weight| sum + weight * nip.shift}
     mod = checksum % modulo
-    mod === nip.shift
+    mod === magick_array.shift
   end
 
 

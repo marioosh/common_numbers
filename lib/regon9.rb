@@ -1,17 +1,18 @@
 module MagickNumbers
-  class Pesel < MagickNumbers::Base
 
+  class Regon9 < MagickNumbers::Base
     def initialize(num)
       super num
-      @mask = [ 1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
-      @modulo = 10
-      @regexp = /\d{11}/
-      @length = 11
+      @mask = [8, 9, 2, 3, 4, 5, 6, 7]
+      @modulo = 11
+      @regexp = /^\d{9}$/
+      @length = 9
+
     end
+
 
     def validate_sum_control
       mod = checksum % modulo
-      mod = 10 - mod
       mod = 0 if mod == 10
       mod === magick_array.shift
     end
