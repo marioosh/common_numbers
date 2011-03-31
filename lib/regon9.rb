@@ -10,12 +10,6 @@ module MagickNumbers
 
     end
 
-
-    def validate_sum_control
-      mod = checksum % modulo
-      mod = 0 if mod == 10
-      mod === magick_array.shift
-    end
   end
 
 end

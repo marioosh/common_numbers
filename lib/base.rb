@@ -23,6 +23,12 @@ module MagickNumbers
     def validate_length
       magick_number.size == length
     end
+
+    def validate_sum_control
+      mod = checksum % modulo
+      mod = 0 if mod == 10
+      mod === magick_array.shift
+    end
     
     def checksum
       @magick_array = magick_number.split( "").collect &:to_i
