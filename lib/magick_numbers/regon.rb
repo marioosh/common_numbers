@@ -1,4 +1,5 @@
 module MagickNumbers
+
   class Regon 
 
     def initialize(num)

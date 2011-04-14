@@ -1,4 +1,5 @@
 module MagickNumbers
+  
   class Nip < MagickNumbers::Base
 
     def initialize(num)
@@ -10,23 +11,20 @@ module MagickNumbers
 
     end
 
+    def validate_length
+      @magick_number.size == (international? ? 12 : 10)
+    end
+    
+    def international?
+      /^PL/ =~ @magick_number
+    end
 
+    def validate_sum_control
+      magick_number.slice!(0..1) if international?
+      mod = checksum % modulo
+      mod === magick_array.shift
+    end
 
-  def validate_length
-    @magick_number.size == (international? ? 12 : 10)
   end
-  
-  def international?
-    /^PL/ =~ @magick_number
-  end
-
-  def validate_sum_control
-    magick_number.slice!(0..1) if international?
-    mod = checksum % modulo
-    mod === magick_array.shift
-  end
-
-
-end
 
 end

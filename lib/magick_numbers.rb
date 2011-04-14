@@ -1,1 +1,7 @@
-Dir[File.expand_path(File.dirname(__FILE__) + '/magick_numbers/*.rb')].each {|f| require f}
+require 'magick_numbers/version'
+require 'magick_numbers/base'
+require 'magick_numbers/nip'
+require 'magick_numbers/pesel'
+require 'magick_numbers/regon'
+require 'magick_numbers/regon14'
+require 'magick_numbers/regon9'

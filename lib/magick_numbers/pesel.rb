@@ -1,4 +1,5 @@
 module MagickNumbers
+
   class Pesel < MagickNumbers::Base
 
     def initialize(num)
@@ -15,6 +16,7 @@ module MagickNumbers
       mod = 0 if mod == 10
       mod === magick_array.shift
     end
+
   end
 
 end
