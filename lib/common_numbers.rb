@@ -1,0 +1,7 @@
+require 'common_numbers/version'
+require 'common_numbers/base'
+require 'common_numbers/nip'
+require 'common_numbers/pesel'
+require 'common_numbers/regon'
+require 'common_numbers/regon14'
+require 'common_numbers/regon9'

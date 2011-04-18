@@ -19,17 +19,17 @@ meybe something else :)
 
 ###Instalation:
 
-    gem install magick_numbers
+    gem install common_numbers
 
 ###Usage:
 
 All numbers are in module MagickNumbers and have simple method `valid?`
 
-    require 'magick_numbers'
+    require 'common_numbers'
     
-    MagickNumbers::Nip.new(nip_number).valid?
-    MagickNumbers::Pesel.new(pesel_number).valid?
-    MagickNumbers::Regon.new(regon_number).valid?
+    CommonNumbers::Polish::Nip.new(nip_number).valid?
+    CommonNumbers::Polish::Pesel.new(pesel_number).valid?
+    CommonNumbers::Polish::Regon.new(regon_number).valid?
 
 ###Valid numbers:
 

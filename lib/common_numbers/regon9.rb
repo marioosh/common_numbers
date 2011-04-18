@@ -1,6 +1,6 @@
-module MagickNumbers
+module CommonNumbers
 
-  class Regon9 < MagickNumbers::Base
+  class Regon9 < CommonNumbers::Base
     def initialize(num)
       super num
       @mask = [8, 9, 2, 3, 4, 5, 6, 7]

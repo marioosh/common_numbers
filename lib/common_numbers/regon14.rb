@@ -1,6 +1,6 @@
-module MagickNumbers
+module CommonNumbers
 
-  class Regon14 < MagickNumbers::Base
+  class Regon14 < CommonNumbers::Base
     
     def initialize(num)
       super num

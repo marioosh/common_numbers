@@ -1,4 +1,4 @@
-module MagickNumbers
+module CommonNumbers
   
   class Base
     

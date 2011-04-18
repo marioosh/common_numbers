@@ -1,7 +1,0 @@
-require 'magick_numbers/version'
-require 'magick_numbers/base'
-require 'magick_numbers/nip'
-require 'magick_numbers/pesel'
-require 'magick_numbers/regon'
-require 'magick_numbers/regon14'
-require 'magick_numbers/regon9'
