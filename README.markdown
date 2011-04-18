@@ -1,8 +1,8 @@
-###MAGICK NUMBERS
+###COMMON NUMBERS
 
-Magic Numbers are numbers verfied with Luhn Algoritm like ISBN, VIN
+Common Numbers are numbers verfied with Luhn Algoritm like ISBN, VIN
 
-magick_numbers gem simple verify this numbers.
+common_numbers gem simple verify this numbers.
 In first version gem is focused on Polish numbers like:
 
 - PESEL - (Polish ID Number)
@@ -15,7 +15,7 @@ but in near future will validate also:
 - EAN
 - VIN
 
-meybe something else :)
+maybe something else :)
 
 ###Instalation:
 
@@ -23,7 +23,7 @@ meybe something else :)
 
 ###Usage:
 
-All numbers are in module MagickNumbers and have simple method `valid?`
+All numbers are in module CommonNumbers and have simple method `valid?`
 
     require 'common_numbers'
     
